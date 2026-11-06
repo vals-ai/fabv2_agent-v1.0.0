@@ -7,5 +7,5 @@ command -v fabv2 >/dev/null
 command -v uv >/dev/null
 test -x /app/.venv/bin/python
 
-uv pip install --python /app/.venv/bin/python --no-deps --reinstall "$SCRIPT_DIR/finance-agent"
+uv pip install --python /app/.venv/bin/python --exclude-newer "7 days" --no-deps --reinstall "$SCRIPT_DIR/finance-agent"
 mkdir -p /app/results
